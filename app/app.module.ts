@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormComponent } from './clientes/form.component';
 import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
+import { ClienteInicioSesionComponent } from './cliente-inicio-sesion/cliente-inicio-sesion.component';
+import { ClienteRegistroSesionComponent } from './cliente-registro-sesion/cliente-registro-sesion.component';
 const routes:Routes = [
   {path: '', redirectTo:'', pathMatch:'full'},
   {path: 'directivas',component: DirectivaComponent},
@@ -20,7 +22,9 @@ const routes:Routes = [
   {path: 'inicio',component: InicioComponent},
   {path: 'proveedores',component: ProveedoresComponent},
   {path: 'clientes/form',component: FormComponent},
-  {path: 'clientes/form/:id',component: FormComponent}
+  {path: 'clientes/form/:id',component: FormComponent},
+  {path: 'inicioSesion',component: ClienteInicioSesionComponent},
+  {path: 'registroSesion',component: ClienteRegistroSesionComponent}
 
 ];
 
@@ -36,7 +40,9 @@ const routes:Routes = [
     ClientesComponent,
     ProveedoresComponent,
     FormComponent,
-    InicioComponent
+    InicioComponent,
+    ClienteInicioSesionComponent,
+    ClienteRegistroSesionComponent
    
   ],
   imports: [

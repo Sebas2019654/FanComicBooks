@@ -1,0 +1,100 @@
+<main>
+    <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+        <h2>Formulario de Registro</h2>
+        <p class="lead">Ser parte de nuestra comunidad es realmente sencillo!.</p>
+    </div>
+
+    <div class="row g-5">
+
+        <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3">Datos generales</h4>
+            <form class="needs-validation" novalidate>
+                <div class="row g-3">
+
+                    <div class="col-7">
+                        <label for="nombres" class="form-label" >Nombres</label>
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="nombres" placeholder="Ejemp: Jose Luis" [(ngModel)]="cliente.nombre" name="nombre" required>
+                            <div class="invalid-feedback">
+                                *Este campo es requerido
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-7">
+                        <label for="apellidos" class="form-label">Apellidos</label>
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="apellidos" placeholder="Ejemp: Espinoza Calle" [(ngModel)]="cliente.apellido" name="apellido" required>
+                            <div class="invalid-feedback">
+                                *Este campo es requerido
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-7">
+                        <label for="fechaNac" class="form-label">Fecha de Nacimiento </label>
+                        <input type="date" name="fechaNac" class="form-control" id="fechaNac">
+                        <div class="invalid-feedback">
+                        </div>
+                    </div>
+
+                    <div class="col-7">
+                        <label for="email" class="form-label">Email </label>
+                        <input type="email" class="form-control" id="email" placeholder="you@example.com" [(ngModel)]="cliente.correo" name="correo" required>
+                        <div class="invalid-feedback">
+                        </div>
+                    </div>
+                </div>
+
+                <!--    my-4    separador   -->
+                <hr class="my-5">
+
+                <h4 class="mb-3">Datos de cuenta</h4>
+
+                <div class="col-sm-5">
+                    <label for="nick" class="form-label">Nick :D</label>
+                    <input type="text" class="form-control" id="nick" placeholder="Ejemp: b44rto" value="" [(ngModel)]="cliente.nickName" name="nickName" required>
+                    <div class="invalid-feedback">
+                        *Este campo es requerido
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <label for="password" class="form-label">Contrasenia</label>
+                    <input type="password" class="form-control" id="nick" placeholder="" value="holaMundo1988" [(ngModel)]="cliente.password" name="password" required>
+                    <div class="invalid-feedback">
+                        *Este campo es requerido
+                    </div>
+                </div>
+
+                <div class="my-3">
+                    <label for="firstName" class="form-label">Ingresar como:</label>
+                    <div class="form-check">
+                        <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                        <label class="form-check-label" for="credit">Autor</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                        <label class="form-check-label" for="debit">Lector</label>
+                    </div>
+                </div>
+
+
+                <hr class="my-5">
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="same-terminos">
+                    <label class="form-check-label" for="same-terminos">Acepto los terminos y condiciones</label>
+                </div>
+
+                <hr class="my-5">
+                <button class="w-100 btn btn-primary btn-lg" type="submit" (click)="create()">Continuar</button>
+
+            </form>
+
+        </div>
+    </div>
+</main>
+
+
