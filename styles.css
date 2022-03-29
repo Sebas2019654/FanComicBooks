@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    min-height: 100vh;
+    background-image: url(fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /*aqui ajusto texto y centro con el fondo*/
+    /*display: flex;
+    /*justify-content: center;
+    align-items: center;*/
+    color: rgb(3, 3, 3);
+    font-family: 'Mukta', sans-serif;
+    font-size: small;
+}
+h2{
+    font-family: 'Redressed', cursive;
+    color: white;
+    font-size: 50px;
+
+    
+}
+h4{
+    font-family: 'Redressed', cursive;
+    color: rgb(7, 7, 7);
+    font-size: 35px;
+
+    
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
+body::before{
+    content: "";
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*selecciono los colores que seran mi fondo de desenfoque*/
+    background: linear-gradient(90deg,
+    #d86b5d,#8ebac2);
+    /*ajusto opacidad del fondo*/
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.LISTA1{
+    margin-top:150px ;
+
+
+}
+.LISTA{
+    margin-top:200px ;
+
+
+}
+.LISTA2{
+    margin-top:270px ;
+
+
+}

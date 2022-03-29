@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">{{title}}</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link active" aria-current="page"  href="#">INICIO</a>
+          </li>
+         
+         
+          <li class="nav-item dropdown" routerLinkActive="active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              OPCIONES
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li routerLinkActive="active"><a class="dropdown-item" routerLink="/directivas">Lista</a></li>
+              <li routerLinkActive="active"><a class="dropdown-item" routerLink="/clientes">Personas</a></li>
+              <li routerLinkActive="active"><a class="dropdown-item" routerLink="/proveedores">Catalogo</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        <form class="d-flex">
+          <li class="nav-item dropdown" routerLinkActive="active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              LOG IN
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li routerLinkActive="active"><a class="dropdown-item" routerLink="/directivas">INICIAR SESION</a></li>
+              <li routerLinkActive="active"><a class="dropdown-item" routerLink="/clientes">REGISTRARSE</a></li>
+       
+            </ul>
+          </li>
+          <input class="form-control me-2" type="search" placeholder="Buscador.." aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+          
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  

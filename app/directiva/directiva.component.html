@@ -1,0 +1,64 @@
+<div class="card-header">
+    <h1>COMICS</h1>
+</div>
+<button type="button" (click)="setHabilitar()" class="btn btn-primary my-3 bg-dark">{{habilitar==true? 'Ocultar':'Mostrar' }} </button>
+
+
+<div class=“card”>
+    
+    <ul class="list-group" *ngIf="habilitar == true">
+        
+        <div class="row row-cols-1 row-cols-md-3 ">
+        <div class="col">
+        <div class="card text-white bg-dark border-danger mb-3 text-center  " style="max-width: 18rem;">  
+        <li class="list-group-item text-white bg-dark mb-3">
+            <h5>IRON MAN</h5>
+        </li>
+        <ul class="list-group text-white bg-dark  mb-3">
+            <li class="list-group-item text-white bg-dark mb-3" *ngFor="let temas of listatemasTS">{{temas}}</li>
+
+        </ul>
+        <tr>
+            <th ><img src="https://www.gifss.com/comics/ironman/images/gif-ironman-2.gif" ></th>
+           
+     
+        </tr>
+        </div>
+        </div>
+        <div class="col">
+        <div class="card text-white bg-dark border-danger mb-3 text-center" style="max-width: 18rem;"> 
+        <li class="list-group-item text-white bg-dark mb-3">
+            <h5>CAPITAN AMERICA</h5>
+        </li>
+        <ul class="list-group text-white bg-dark mb-3">
+            <li class="list-group-item text-white bg-dark mb-3" *ngFor="let temas of listatemasJS">{{temas}}</li>
+
+        </ul>
+        <tr>
+            <th ><img src="https://64.media.tumblr.com/1b15f4310c70c0e50fcabca3afd89ced/tumblr_olwmfvILiD1s65sdeo1_400.gifv" ></th>
+           
+     
+        </tr>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card text-white bg-dark border-danger mb-3 text-center" style="max-width: 18rem;"> 
+        <li class="list-group-item text-white bg-dark mb-3">
+            <h5>THOR</h5>
+        </li>
+        <ul class="list-group text-white bg-dark mb-3">
+            <li class="list-group-item text-white bg-dark mb-3" *ngFor="let temas of listatemasC">{{temas}}</li>
+
+        </ul>
+        <tr>
+            <th ><img src="https://emojis.slackmojis.com/emojis/images/1643514160/1210/thor.gif?1643514160" ></th>
+           
+     
+        </tr>
+    </div>
+</div>
+     </div>
+    </ul>
+
+</div>
+

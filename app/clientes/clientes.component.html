@@ -1,0 +1,40 @@
+<div class="card-header">
+    <h4>LISTADO DE CLIENTES</h4>
+</div>
+
+<div class="card">
+    <div class="my-2 text-left">
+        <button class="btn btn-primary my-3 bg-dark" type="button" [routerLink]="['/clientes/form']">Crear Cliente</button>
+    
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Clientes</h5>
+        <table class="table table-borded table-striped">
+            <thead>
+                <tr>
+                    <th>NICKNAME</th>
+                    <th>NOMBRE</th>
+                    <th>APELLIDO</th>
+                   
+                    <th>EMAIL</th>
+                    <th>CONTRASEÑA</th>
+                    <th>ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let Cliente of clientes">
+                    <td>{{Cliente.nickName}}</td>
+                    <td>{{Cliente.Nombre}}</td>
+                    <td>{{Cliente.Apellido}}</td>
+                    <td>{{Cliente.Correo}}</td>
+                    <td>{{ Cliente.Password }}</td>
+                    <td>
+                        <button class="btn btn-warning btn-rounded btn-primary" type="button" [routerLink]="['/clientes/form',Cliente.nickName]">Edit</button>
+                        <button (click)="Delete(Cliente)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                      </td> 
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
