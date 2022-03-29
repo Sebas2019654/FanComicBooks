@@ -24,10 +24,10 @@
             <tbody>
                 <tr *ngFor="let Cliente of clientes">
                     <td>{{Cliente.nickName}}</td>
-                    <td>{{Cliente.Nombre}}</td>
-                    <td>{{Cliente.Apellido}}</td>
-                    <td>{{Cliente.Correo}}</td>
-                    <td>{{ Cliente.Password }}</td>
+                    <td>{{Cliente.nombre}}</td>
+                    <td>{{Cliente.apellido}}</td>
+                    <td>{{Cliente.correo}}</td>
+                    <td>{{ Cliente.password }}</td>
                     <td>
                         <button class="btn btn-warning btn-rounded btn-primary" type="button" [routerLink]="['/clientes/form',Cliente.nickName]">Edit</button>
                         <button (click)="Delete(Cliente)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>

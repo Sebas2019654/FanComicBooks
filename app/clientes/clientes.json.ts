@@ -1,7 +1,7 @@
 import { Cliente } from './cliente';
 
 export const clientes: Cliente[] =[
-    {nickName:"famkdm", Nombre:'Carmen', Apellido:'Tacuri', Fecha_Nacimiento:'2021-03-12',Correo:'tacuri@hotmail.com',Password:"sdadandj"},
+    {nickName:"famkdm", nombre:'Carmen', apellido:'Tacuri', fecha_nacimiento:'2021-03-12',correo:'tacuri@hotmail.com',password:"sdadandj"},
     
     
   ];

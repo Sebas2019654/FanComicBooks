@@ -12,7 +12,7 @@ export class ClienteService {
   private urlEndPoint1:string ='http://localhost:8074/api/create';
   private urlEndPoint2:string ='http://localhost:8074/api/clientes';
   private urlEndPoint3:string ='http://localhost:8074/api/update';
-  private urlEndPoint4:string ='http://localhost:8074/api/delete';
+  private urlEndPoint4:string ='http://localhost:8073/Persona/delete';
   private httpHeaders=new HttpHeaders({'Content-Type': 'application/json'})
   constructor(private http: HttpClient) { }
 
