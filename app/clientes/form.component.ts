@@ -9,8 +9,8 @@ import Swal from 'sweetalert2';
 })
 export class FormComponent implements OnInit {
   public cliente: Cliente =new Cliente()
-  public titulo:string="Formulario Cliente"
-  constructor(private clienteService:ClienteService, private router:Router, private activateRooute:ActivatedRoute) { }
+
+  constructor(private clienteService:ClienteService , private router:Router, private activateRooute:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.cargar();
@@ -19,9 +19,9 @@ export class FormComponent implements OnInit {
   cargar():void{
     this.activateRooute.params.subscribe(
       e=>{
-        let id=e['nickName'];
-        if(id){
-          this.clienteService.getClienteId(id).subscribe(
+        let Nick_Name=e['Nick_Name'];
+        if(Nick_Name){
+          this.clienteService.get(Nick_Name).subscribe(
 
             es=> this.cliente=es
           );

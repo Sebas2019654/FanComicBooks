@@ -8,5 +8,5 @@ import { Component }from '@angular/core';
 
 
 export class FooterComponent {
-    autor: any={nombre:'Sebastian', apellido:'Cabrera' }
+    autor: any={nombre:'Fan Comic', apellido:'Books' }
 }

@@ -9,9 +9,9 @@ import { map} from 'rxjs/operators';
 })
 export class ClienteService {
   private urlEndPoint:string ='http://localhost:8073/Persona/read';
-  private urlEndPoint1:string ='http://localhost:8074/api/create';
-  private urlEndPoint2:string ='http://localhost:8074/api/clientes';
-  private urlEndPoint3:string ='http://localhost:8074/api/update';
+  private urlEndPoint1:string ='http://localhost:8073/Persona/create';
+  private urlEndPoint2:string ='http://localhost:8073/Persona/persona';
+  private urlEndPoint3:string ='http://localhost:8073/Persona/update';
   private urlEndPoint4:string ='http://localhost:8073/Persona/delete';
   private httpHeaders=new HttpHeaders({'Content-Type': 'application/json'})
   constructor(private http: HttpClient) { }
@@ -31,8 +31,8 @@ export class ClienteService {
     return this.http.post<Cliente>(this.urlEndPoint1,cliente,{headers: this.httpHeaders})
   }
 
-  getClienteId(id:string){
-      return this.http.get<Cliente>(this.urlEndPoint2+"/"+id)
+  get(Nick_Name:string){
+      return this.http.get<Cliente>(this.urlEndPoint2+"/"+Nick_Name)
 
   }
   updateCliente(cliente:Cliente){

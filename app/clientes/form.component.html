@@ -1,44 +1,106 @@
-<div class="card bg-dark text-white">
-<div class="card-header">{{titulo}}</div>
-<div class="card-body">
+<main >
+    <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="https://d3lqdljps13i2n.cloudfront.net/images/imagenes/img_919011_9344.jpg" alt="" width="72" height="57">
+        <h2>Formulario de Registro</h2>
+        <p class="lead">Ser parte de nuestra comunidad es realmente sencillo!.</p>
+    </div>
 
-    <form ngNativeValidate > 
-        <div class="form-group row">
+    <div class="row g-5">
 
-            <label for="nombre" class="col-form-label col-sm-2" >Nombre</label>
+        <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3">Datos generales</h4>
+            <form ngNativeValidate >
+                <div class="row g-3">
+
+                    <div class="col-7">
+                        <label for="nombres" class="form-label" >Nombres</label>
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" placeholder="Ejemp: Jose Luis" [(ngModel)]="cliente.nombre" name="nombre" required>
+                            <div class="invalid-feedback">
+                                *Este campo es requerido
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-7">
+                        <label for="apellidos" class="form-label">Apellidos</label>
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control"  placeholder="Ejemp: Espinoza Calle" [(ngModel)]="cliente.apellido" name="apellido" required>
+                            <div class="invalid-feedback">
+                                *Este campo es requerido
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-7">
+                        <label for="fecha_Nacimiento" class="form-label">Fecha de Nacimiento </label>
+                        <input type="date" class="form-control"  [(ngModel)]="cliente.fecha_Nacimiento" name="fecha_Nacimiento" required>
+                        <div class="invalid-feedback">
+                        </div>
+                    </div>
+
+                    <div class="col-7">
+                        <label for="email" class="form-label">Email </label>
+                        <input type="email" class="form-control"  placeholder="you@example.com" [(ngModel)]="cliente.correo" name="correo" required>
+                        <div class="invalid-feedback">
+                        </div>
+                    </div>
+                </div>
+
+                <!--    my-4    separador   -->
+                <hr class="my-5">
+
+                <h4 class="mb-3">Datos de cuenta</h4>
+
+                <div class="col-sm-5">
+                    <label for="Nick_Name" class="form-label">Nick :D</label>
+                    <input type="text" class="form-control"  placeholder="Ejemp: b44rto" value="" [(ngModel)]="cliente.nickName" name="Nick_Name" required>
+                    <div class="invalid-feedback">
+                        *Este campo es requerido
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" placeholder="" value="holaMundo1988" [(ngModel)]="cliente.password" name="password" required>
+                    <div class="invalid-feedback">
+                        *Este campo es requerido
+                    </div>
+                </div>
+
+                <div class="my-3">
+                    <label for="firstName" class="form-label">Ingresar como:</label>
+                    <div class="form-check">
+                        <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                        <label class="form-check-label" for="credit">Autor</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                        <label class="form-check-label" for="debit">Lector</label>
+                    </div>
+                </div>
+
+
+                
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="same-terminos">
+                    <label class="form-check-label" for="same-terminos">Acepto los terminos y condiciones</label>
+                </div>
+
+                 <div class="form-group row">
+
             <div class="col-sm-6">
-                <input type="text" class="form-control" [(ngModel)]="cliente.nombre" name="nombre" required>
-            </div>
-        </div>
-
-        <div class="form-group row">
-
-            <label for="apellido" class="col-form-label col-sm-2" >Apellido</label>
-            <div class="col-sm-6">
-                <input type="text" class="form-control" [(ngModel)]="cliente.apellido" name="apellido" required>
-            </div>
-        </div>
-
-        <div class="form-group row">
-
-            <label for="email" class="col-form-label col-sm-2" >Email</label>
-            <div class="col-sm-6">
-                <input type="email" class="form-control" [(ngModel)]="cliente.correo" name="email" required>
-            </div>
-        </div>
-        <div class="form-group row">
-
-            <div class="col-sm-6">
-                <button class="btn btn-primary" role="button" (click)="create()"*ngIf="!cliente.nickName else elseBlock">Registrar </button>
-            <ng-template #elseBlock >
+                <button class="btn btn-primary" role="button" (click)="create()">Registrar </button>
+                <div class="my-3">
                 <button class="btn btn-primary" role="button" (click)="update()">Actualizar  </button>
-            </ng-template>
+            </div>
             </div>
         </div>
+        
 
-    </form>
+            </form>
 
-
-
-</div>
-</div>
+        </div>
+    </div>
+</main>
