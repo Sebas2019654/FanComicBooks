@@ -7,6 +7,7 @@ import { HeaderComponent} from './header/header.component';
 import { DirectivaComponent } from './directiva/directiva.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ClienteService } from './clientes/cliente.service';
+import { CatalogoService } from './catalogos/catalogo.service';
 import { ProveedoresComponent } from './proveedores/proveedores.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -17,6 +18,9 @@ import { ClienteInicioSesionComponent } from './cliente-inicio-sesion/cliente-in
 import { YoutubeComponent } from './youtube/youtube.component';
 import {YouTubePlayerModule} from '@angular/youtube-player';
 import { PdfComponent } from './pdf/pdf.component';
+import { CatalogosComponent } from './catalogos/catalogos.component';
+import { ComicsComponent } from './comics/comics.component';
+import { FcatalogoComponent } from './catalogos/fcatalogo.component';
 const routes:Routes = [
   {path: '', redirectTo:'', pathMatch:'full'},
   {path: 'directivas',component: DirectivaComponent},
@@ -25,9 +29,12 @@ const routes:Routes = [
   {path: 'proveedores',component: ProveedoresComponent},
   {path: 'clientes/form',component: FormComponent},
   {path: 'clientes/form/:Nick_Name',component: FormComponent},
+  {path: 'catalogos/form',component: FcatalogoComponent},
+  {path: 'catalogos/form/:cod_Catalogo',component:FcatalogoComponent},
   {path: 'inicioSesion',component: ClienteInicioSesionComponent},
   {path: 'youtube',component: YoutubeComponent},
-  {path: 'pdf',component: PdfComponent}
+  {path: 'pdf',component: PdfComponent},
+  {path: 'catalogos',component: CatalogosComponent}
 
 ];
 
@@ -46,7 +53,10 @@ const routes:Routes = [
     InicioComponent,
     ClienteInicioSesionComponent,
     YoutubeComponent,
-    PdfComponent
+    PdfComponent,
+    CatalogosComponent,
+    ComicsComponent,
+    FcatalogoComponent
    
   ],
   imports: [

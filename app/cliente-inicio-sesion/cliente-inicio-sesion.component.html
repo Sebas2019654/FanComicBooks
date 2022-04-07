@@ -1,38 +1,45 @@
 <main>
-    <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src="https://d3lqdljps13i2n.cloudfront.net/images/imagenes/img_919011_9344.jpg" alt="" width="72" height="57">
-        <h2>Formulario de Login</h2>
-        <p class="lead">Ser parte de nuestra comunidad es realmente sencillo!.</p>
+
+    <div class="encabezado">
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="https://d3lqdljps13i2n.cloudfront.net/images/imagenes/img_919011_9344.jpg" alt="" width="72" height="57">
+            <h2>Formulario de Login</h2>
+            <p class="lead">Ser parte de nuestra comunidad es realmente sencillo!.</p>
+        </div>    
     </div>
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-md-7 col-lg-8">
+                <h4 class="mb-3">Datos generales</h4>
+                <form class="needs-validation" novalidate>
+                    <div class="cajas">
+                        
+                        <div submits>
+                            <div class="col-sm-5">
+                                <label for="nick" class="form-label">Nick :D</label>
+                                <input type="text" class="form-control" id="nick" placeholder="Ejemp: b44rto" value="" required>
+                                <div class="invalid-feedback">
+                                    *Este campo es requerido
+                                </div>
+                            </div>
+    
 
-    <div class="row g-5">
+                            <div class="col-sm-5">
+                                <label for="password" class="form-label">Contrasenia</label>
+                                <input type="password" class="form-control" id="nick" placeholder="" value="holaMundo1988" required>
+                                <div class="invalid-feedback">
+                                    *Este campo es requerido
+                                </div>
+                            </div>
+                            
 
-        <div class="col-md-7 col-lg-8">
-            <h4 class="mb-3">Datos generales</h4>
-            <form class="needs-validation" novalidate>
-                <div class="row g-3">
-
-                    <div class="col-sm-5">
-                        <label for="nick" class="form-label">Nick :D</label>
-                        <input type="text" class="form-control" id="nick" placeholder="Ejemp: b44rto" value="" required>
-                        <div class="invalid-feedback">
-                            *Este campo es requerido
+                            <button class="btn btn-primary btn-lg" type="submit" [routerLink]="['/inicio']">Continuar</button>
                         </div>
+
+
                     </div>
-
-                    <div class="col-sm-5">
-                        <label for="password" class="form-label">Contrasenia</label>
-                        <input type="password" class="form-control" id="nick" placeholder="" value="holaMundo1988" required>
-                        <div class="invalid-feedback">
-                            *Este campo es requerido
-                        </div>
-                    </div>
-
-                    <hr class="my-5">
-                    <button class="w-100 btn btn-primary btn-lg" type="submit" [routerLink]="['/inicio']">Continuar</button>
-
-                </div>
-            </form>
+                </form>
+            </div>
 
         </div>
     </div>

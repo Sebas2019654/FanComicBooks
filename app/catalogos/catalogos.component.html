@@ -1,0 +1,37 @@
+<div class="card-header">
+    <h4>CATOLOGOS</h4>
+</div>
+
+<div class="card">
+    <div class="my-2 text-left">
+        <button class="btn btn-primary my-3 bg-dark" type="button" [routerLink]="['/catalogos/form']">Crear Catalogo</button>
+    
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">COMICS</h5>
+        <table class="table table-borded table-striped">
+            <thead>
+                <tr>
+                    <th>CODIGO</th>
+                    <th>TITULO</th>
+                    <th>NUMERO</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let Catalogo of catalogos">
+                    <td>{{Catalogo.cod_Catalogo}}</td>
+                    <td>{{Catalogo.titulo_Catalogo}}</td>
+                    <td>{{Catalogo.numero_Comic}}</td>   
+                    <td>
+                        <button class="btn btn-warning btn-rounded btn-primary" type="button" [routerLink]="['/catalogos/form',Catalogo.cod_Catalogo]">Edit</button>
+                      
+                    </td>                  
+                   
+                </tr>
+                
+
+            </tbody>
+        </table>
+    </div>
+</div>
